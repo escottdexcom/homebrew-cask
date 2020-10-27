@@ -1,11 +1,11 @@
-cask 'melodics' do
-  version '2.1.3764'
-  sha256 'ec5efa5246406def1e4d74b5a5229dc496e2cc030096d8dedeaba781e1506529'
+cask "melodics" do
+  version "2.1.5134"
+  sha256 "cf5800a8f633e47ec939a335f47f90aa32197a42c3ec3e0599b54ef8a6a487a6"
 
   url "https://web-cdn.melodics.com/download/MelodicsV#{version.major}.dmg"
   appcast "https://web-cdn.melodics.com/download/osxupdatescastv#{version.major}.xml"
-  name 'Melodics'
-  homepage 'https://melodics.com/'
+  name "Melodics"
+  homepage "https://melodics.com/"
 
-  app 'Melodics.app'
+  app "Melodics.app"
 end

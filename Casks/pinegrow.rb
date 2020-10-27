@@ -1,11 +1,11 @@
-cask 'pinegrow' do
-  version '5.8'
-  sha256 '8c2c1863c74b99f5b646f6262bf81fb4b5eaa534b4c0bc02600237f08ae219a4'
+cask "pinegrow" do
+  version "5.973"
+  sha256 "18dc7c55b32327adea54c2eee9133da8636774fccb97bdce1bcab7e6cd3637f0"
 
-  url "http://download.pinegrow.com/PinegrowMac.#{version}.dmg"
-  appcast 'https://pinegrow.com/'
-  name 'Pinegrow'
-  homepage 'https://pinegrow.com/'
+  url "https://download.pinegrow.com/PinegrowMac.#{version}.dmg"
+  appcast "https://pinegrow.com/"
+  name "Pinegrow"
+  homepage "https://pinegrow.com/"
 
-  app 'Pinegrow.app'
+  app "Pinegrow.app"
 end

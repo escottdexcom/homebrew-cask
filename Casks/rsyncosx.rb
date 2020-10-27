@@ -1,17 +1,20 @@
-cask 'rsyncosx' do
-  version '6.0.1'
-  sha256 '5b4e57ffe7c0e54de16f9b7f66ec0091ebccbf97176ff7a62a2ac25d356ed96b'
+cask "rsyncosx" do
+  version "6.4.6"
+  sha256 "818170625655a70151670077451865f1b5256576fcd65364992ee25eeba2ff23"
 
-  url "https://github.com/rsyncOSX/RsyncOSX/releases/download/v#{version}/RsyncOSX-#{version}.dmg"
-  appcast 'https://github.com/rsyncOSX/RsyncOSX/releases.atom'
-  name 'RsyncOSX'
-  homepage 'https://github.com/rsyncOSX/RsyncOSX'
+  url "https://github.com/rsyncOSX/RsyncOSX/releases/download/v#{version}/RsyncOSX.#{version}.dmg"
+  appcast "https://github.com/rsyncOSX/RsyncOSX/releases.atom"
+  name "RsyncOSX"
+  desc "GUI for rsync"
+  homepage "https://github.com/rsyncOSX/RsyncOSX"
 
-  app 'RsyncOSX.app'
+  depends_on macos: ">= :catalina"
+
+  app "RsyncOSX.app"
 
   zap trash: [
-               '~/Library/Caches/no.blogspot.RsyncOSX',
-               '~/Library/Preferences/no.blogspot.RsyncOSX.plist',
-               '~/Library/Saved Application State/no.blogspot.RsyncOSX.savedState',
-             ]
+    "~/Library/Caches/no.blogspot.RsyncOSX",
+    "~/Library/Preferences/no.blogspot.RsyncOSX.plist",
+    "~/Library/Saved Application State/no.blogspot.RsyncOSX.savedState",
+  ]
 end

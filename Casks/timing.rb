@@ -1,25 +1,29 @@
-cask 'timing' do
-  version '2019.3'
-  sha256 '65b696c17642e2356b831439997913f9b7d5bf0316bd0d945d22fdf4860b42aa'
+cask "timing" do
+  version "2020.9"
+  sha256 "1273666aa2d5ee91eae0a4e0ab99c409813f3a680672c2d6dfe3faee7f3e6d88"
 
-  url 'https://timingapp.com/download/Timing.dmg'
-  appcast 'https://timingapp.com/updates/timing2.xml'
-  name 'Timing'
-  homepage 'https://timingapp.com/'
+  url "https://updates.timingapp.com/download/Timing-#{version}.dmg"
+  appcast "https://timingapp.com/updates/timing2.xml"
+  name "Timing"
+  name "Timing 2"
+  desc "Automatic time and productivity tracking app"
+  homepage "https://timingapp.com/"
 
-  app 'Timing.app'
+  auto_updates true
 
-  uninstall login_item: 'TimingHelper'
+  app "Timing.app"
+
+  uninstall login_item: "TimingHelper"
 
   zap trash: [
-               '~/Library/Application Support/info.eurocomp.TimingHelper.InfoExtractorService',
-               '~/Library/Application Support/info.eurocomp.Timing2/',
-               '~/Library/Application Support/info.eurocomp.TimingHelper/',
-               '~/Library/Caches/info.eurocomp.TimingHelper.InfoExtractorService',
-               '~/Library/Caches/info.eurocomp.Timing2/',
-               '~/Library/Caches/info.eurocomp.TimingHelper/',
-               '~/Library/Preferences/info.eurocomp.TimingHelper.InfoExtractorService.plist',
-               '~/Library/Preferences/info.eurocomp.Timing2.plist',
-               '~/Library/Preferences/info.eurocomp.TimingHelper.plist',
-             ]
+    "~/Library/Application Support/info.eurocomp.TimingHelper.InfoExtractorService",
+    "~/Library/Application Support/info.eurocomp.Timing2/",
+    "~/Library/Application Support/info.eurocomp.TimingHelper/",
+    "~/Library/Caches/info.eurocomp.TimingHelper.InfoExtractorService",
+    "~/Library/Caches/info.eurocomp.Timing2/",
+    "~/Library/Caches/info.eurocomp.TimingHelper/",
+    "~/Library/Preferences/info.eurocomp.TimingHelper.InfoExtractorService.plist",
+    "~/Library/Preferences/info.eurocomp.Timing2.plist",
+    "~/Library/Preferences/info.eurocomp.TimingHelper.plist",
+  ]
 end

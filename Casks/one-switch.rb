@@ -1,14 +1,14 @@
-cask 'one-switch' do
-  version '1.8.1'
-  sha256 'd8d3916b7ec7c2bea1c22c624ceb310ebd10d5c2f70977521a15142a44db2707'
+cask "one-switch" do
+  version "1.15,266"
+  sha256 "d851e46041bf4b31bccd36ae828714f664fd263552292e51ad07922313f16cbf"
 
-  # dl.devmate.com/studio.fireball.OneSwitch was verified as official when first introduced to the cask
-  url 'https://dl.devmate.com/studio.fireball.OneSwitch/OneSwitch.zip'
-  appcast 'https://updates.devmate.com/studio.fireball.OneSwitch.xml'
-  name 'One Switch'
-  homepage 'https://fireball.studio/oneswitch'
+  url "https://fireball.studio/api/release_manager/downloads/studio.fireball.OneSwitch/#{version.after_comma}.zip"
+  appcast "https://fireball.studio/api/release_manager/studio.fireball.OneSwitch.xml"
+  name "One Switch"
+  desc "All system and utility switches in one place"
+  homepage "https://fireball.studio/oneswitch"
 
-  depends_on macos: '>= :mojave'
+  depends_on macos: ">= :mojave"
 
-  app 'One Switch.app'
+  app "One Switch.app"
 end

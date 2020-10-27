@@ -1,11 +1,13 @@
-cask 'protopie' do
-  version '4.1.3'
-  sha256 '354eb173607e613ea6cb670104eb93727eea24dc9907d945e42f70caec3b5c13'
+cask "protopie" do
+  version "5.1.2"
+  sha256 "01e5e0b947946da44b4b3aa865d2b7825d9d60dc8143b3f8c1d392f27854b13c"
 
-  url "http://release.protopie.io/ProtoPie-#{version}.dmg"
-  appcast 'https://www.protopie.io/support/updates/'
-  name 'ProtoPie'
-  homepage 'https://www.protopie.io/'
+  url "https://release.protopie.io/ProtoPie-#{version}.dmg"
+  appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.protopie.io/darwin/latest"
+  name "ProtoPie"
+  homepage "https://www.protopie.io/"
 
-  app 'ProtoPie.app'
+  auto_updates true
+
+  app "ProtoPie.app"
 end

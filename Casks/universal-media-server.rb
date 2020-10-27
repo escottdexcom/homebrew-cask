@@ -1,14 +1,15 @@
-cask 'universal-media-server' do
-  version '9.1.0'
-  sha256 '614ddb7e5dc0d80cfcff1cac8e4a1524dfb89dcf66e888ae40b714836a4724f4'
+cask "universal-media-server" do
+  version "9.8.1"
+  sha256 "339747bc38761bc9155c57487cf7f8fa4419fd221e1042d770cf791bf34e73ca"
 
-  # github.com/UniversalMediaServer/UniversalMediaServer was verified as official when first introduced to the cask
+  # github.com/UniversalMediaServer/UniversalMediaServer/ was verified as official when first introduced to the cask
   url "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/#{version}/UMS-#{version}.dmg"
-  appcast 'https://github.com/UniversalMediaServer/UniversalMediaServer/releases.atom'
-  name 'Universal Media Server'
-  homepage 'https://www.universalmediaserver.com/'
+  appcast "https://github.com/UniversalMediaServer/UniversalMediaServer/releases.atom"
+  name "Universal Media Server"
+  desc "Media server supporting DLNA, UPnP and HTTP(S)"
+  homepage "https://www.universalmediaserver.com/"
 
-  app 'Universal Media Server.app'
+  app "Universal Media Server.app"
 
-  zap trash: '~/Library/Application Support/UMS/'
+  zap trash: "~/Library/Application Support/UMS/"
 end

@@ -1,11 +1,11 @@
-cask 'waltr' do
-  version '2.6.23,1573473986'
-  sha256 'c7ce795649acb1faff75ed833b3b96b1519b0a82a1e1f8cab23a0e6fc7913495'
+cask "waltr" do
+  version "2.6.27"
+  sha256 "5b1ca23244d060c6ca941f96ca78e91fbff5cde34cdf5d9879468fee6e2929f3"
 
-  # dl.devmate.com/com.softorino.waltr2 was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.softorino.waltr2/#{version.before_comma}/#{version.after_comma}/Waltr#{version.major}-#{version.before_comma}.zip"
-  appcast "https://updates.devmate.com/com.softorino.waltr#{version.major}.xml"
-  name 'WALTR'
+  # dl.devmate.com/com.softorino.waltr2/ was verified as official when first introduced to the cask
+  url "https://shining.softorino.com/shine_uploads/waltr#{version.major}mac_#{version}.dmg"
+  appcast "https://api.softorino.com/v1/app-manager/waltr#{version.major}/mac/updates"
+  name "WALTR"
   homepage "https://softorino.com/w#{version.major}/"
 
   app "Waltr #{version.major}.app"

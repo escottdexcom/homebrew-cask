@@ -1,18 +1,19 @@
-cask 'upic' do
-  version '0.12.4'
-  sha256 '2afc820774b7eb36e26f8f0d367de51abf7f1ca74ff9a16c9dbbade6f1439911'
+cask "upic" do
+  version "0.20.1"
+  sha256 "6015aaac535600015ccc940dbb77a514476af15b1ae3e9a8249d0ce6b06039c0"
 
-  url "https://github.com/gee1k/uPic/releases/download/v#{version}/uPic.dmg"
-  appcast 'https://github.com/gee1k/uPic/releases.atom'
-  name 'uPic'
-  homepage 'https://github.com/gee1k/uPic'
+  url "https://github.com/gee1k/uPic/releases/download/v#{version}/uPic.zip"
+  appcast "https://github.com/gee1k/uPic/releases.atom"
+  name "uPic"
+  desc "Native and simple picture and file upload tool"
+  homepage "https://github.com/gee1k/uPic"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'UPic.app'
+  app "uPic.app"
 
   zap trash: [
-               '~/Library/Preferences/com.svend.uPic.plist',
-               '~/Library/Caches/com.svend.uPic',
-             ]
+    "~/Library/Preferences/com.svend.uPic.plist",
+    "~/Library/Caches/com.svend.uPic",
+  ]
 end

@@ -1,14 +1,14 @@
-cask 'timeular' do
-  version '2.3.5'
-  sha256 '49a9d71d8739042ffaaa5aa1c6ef3f1523786f225f2658b1883b909fba6aa77b'
+cask "timeular" do
+  version "3.5.1"
+  sha256 "b8b2b659950abc1de10902e464e0d24c381e3c2504e2a30ccb9b671443ffbdff"
 
-  # timeular-desktop-packages.s3.amazonaws.com was verified as official when first introduced to the cask
+  # timeular-desktop-packages.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://timeular-desktop-packages.s3.amazonaws.com/mac/production/Timeular-#{version}.dmg"
-  appcast 'https://timeular-desktop-packages.s3.amazonaws.com/mac/production/latest-mac.yml'
-  name 'Timeular'
-  homepage 'https://timeular.com/'
+  appcast "https://timeular-desktop-packages.s3.amazonaws.com/mac/production/latest-mac.yml"
+  name "Timeular"
+  homepage "https://timeular.com/"
 
   auto_updates true
 
-  app 'Timeular.app'
+  app "Timeular.app"
 end

@@ -1,20 +1,33 @@
-cask 'clashx' do
-  version '1.16.7'
-  sha256 '4885fe42aba872fa86a9a388072dbf51ad8b9f1c31a442520c410df5faf4792b'
+cask "clashx" do
+  version "1.30.2"
+  sha256 "470244a89d40a0b74ba7fefc12bd18edc0cdd003d9f66a13277d18c497fb28f4"
 
   url "https://github.com/yichengchen/clashX/releases/download/#{version}/ClashX.dmg"
-  appcast 'https://github.com/yichengchen/clashX/releases.atom'
-  name 'ClashX'
-  homepage 'https://github.com/yichengchen/clashX'
+  appcast "https://github.com/yichengchen/clashX/releases.atom"
+  name "ClashX"
+  desc "Rule-based custom proxy with GUI based on clash"
+  homepage "https://github.com/yichengchen/clashX"
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'ClashX.app'
+  app "ClashX.app"
+
+  uninstall delete:    [
+    "/Library/PrivilegedHelperTools/com.west2online.ClashX.ProxyConfigHelper",
+    "/Library/LaunchDaemons/com.west2online.ClashX.ProxyConfigHelper.plist",
+  ],
+            launchctl: "com.west2online.ClashX.ProxyConfigHelper",
+            quit:      "com.west2online.ClashX"
 
   zap trash: [
-               '~/Library/Preferences/com.west2online.ClashX.plist',
-               '~/Library/Logs/ClashX',
-               '~/.config/clash/',
-             ]
+    "~/Library/Application Support/com.west2online.ClashX",
+    "~/Library/Cookies/com.west2online.ClashX.binarycookies",
+    "~/Library/Caches/io.fabric.sdk.mac.data/com.west2online.ClashX",
+    "~/Library/Caches/com.west2online.ClashX",
+    "~/Library/Caches/com.crashlytics.data/com.west2online.ClashX",
+    "~/Library/Preferences/com.west2online.ClashX.plist",
+    "~/Library/Logs/ClashX",
+    "~/.config/clash/",
+  ]
 end

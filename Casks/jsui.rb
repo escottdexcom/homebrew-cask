@@ -1,15 +1,16 @@
-cask 'jsui' do
-  version '0.0.24'
-  sha256 '28972f9f941360b23a29a5646233c75eb564c831600b3182ea1e6e9f54d8932c'
+cask "jsui" do
+  version "0.0.25"
+  sha256 "c262c5875ff90521a7785b17de011acb3dce54e67e124c64ec005b87ef897736"
 
   url "https://github.com/kitze/JSUI/releases/download/v#{version}/JSUI-#{version}-mac.zip"
-  appcast 'https://github.com/kitze/JSUI/releases.atom'
-  name 'JSUI'
-  homepage 'https://github.com/kitze/JSUI'
+  appcast "https://github.com/kitze/JSUI/releases.atom"
+  name "JSUI"
+  desc "UI toolkit for managing JavaScript apps"
+  homepage "https://github.com/kitze/JSUI"
 
   auto_updates true
 
-  app 'JSUI.app'
+  app "JSUI.app"
 
-  zap trash: '~/Library/Application Support/jsui'
+  zap trash: "~/Library/Application Support/jsui"
 end

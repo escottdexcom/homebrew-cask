@@ -1,20 +1,21 @@
-cask 'ocenaudio' do
-  version '3.7.6'
+cask "ocenaudio" do
+  version "3.9.5"
 
   if MacOS.version <= :high_sierra
-    sha256 '57b8a9ec3786754d1a7e22817ccd59cac0a1fb21d67515e2987ea9fa3c8eac50'
+    sha256 "a286a08532a18843bbb7c3e9dd1f087ddc4c7f8716eafb1f83d890bb32a556e7"
 
-    url 'https://www.ocenaudio.com/downloads/index.php/ocenaudio_sierra.dmg'
+    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_sierra.dmg"
   else
-    sha256 'cdf64907c5718a50e82451d7fc1ddf2c3c6c960d514cb730dc58bc43a7fead15'
+    sha256 "a5402b621ddbd0415a9303f1b80dc90ddf72dc18a26dc80ccc187b465aa9e828"
 
-    url 'https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg'
+    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg"
   end
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg'
-  name 'ocenaudio'
-  homepage 'https://www.ocenaudio.com/en'
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg"
+  name "ocenaudio"
+  desc "Audio editor"
+  homepage "https://www.ocenaudio.com/en"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'ocenaudio.app'
+  app "ocenaudio.app"
 end

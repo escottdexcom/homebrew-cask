@@ -1,13 +1,16 @@
-cask 'clipgrab' do
-  version '3.8.5'
-  sha256 '53227ad63233d6e5e6b371e0606b1ca3d6b9f840a3d61f296bf91d92ee85e831'
+cask "clipgrab" do
+  version "3.8.14"
+  sha256 "291b3d202a4761f2a4592913a67a587bf7d24c86076ffb0adfab61d60aacacc7"
 
   url "https://download.clipgrab.org/ClipGrab-#{version}.dmg"
-  appcast 'https://clipgrab.org/'
-  name 'ClipGrab'
-  homepage 'https://clipgrab.org/'
+  appcast "https://clipgrab.org/"
+  name "ClipGrab"
+  desc "Downloads videos and audio from websites"
+  homepage "https://clipgrab.org/"
 
-  app 'ClipGrab.app'
+  depends_on macos: ">= :sierra"
 
-  zap trash: '~/Library/Preferences/de.clipgrab.ClipGrab.plist'
+  app "ClipGrab.app"
+
+  zap trash: "~/Library/Preferences/de.clipgrab.ClipGrab.plist"
 end

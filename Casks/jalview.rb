@@ -1,11 +1,11 @@
-cask 'jalview' do
-  version '2.11.0'
-  sha256 '640c43b9e564092d4f765b5b30bc901003a7ee80a49442544159bc0bfb207cfc'
+cask "jalview" do
+  version "2.11.1.2"
+  sha256 "bfc0f6b05249c17508b189a3353190fa145f7665761cb5a08cf3e0c839400a14"
 
-  url "https://www.jalview.org/getdown/release/install4j/1.8/Jalview-OFFLINE_macos-app_#{version.dots_to_underscores}-j8.dmg"
-  appcast 'https://www.jalview.org/getdown/release/'
-  name 'Jalview'
-  homepage 'https://www.jalview.org/'
+  url "https://www.jalview.org/getdown/release/install4j/1.8/Jalview-#{version.dots_to_underscores}-macos-java_8.dmg"
+  appcast "https://www.jalview.org/getdown/release/install4j/1.8/updates.xml"
+  name "Jalview"
+  homepage "https://www.jalview.org/"
 
-  app 'Jalview.app'
+  app "Jalview.app"
 end

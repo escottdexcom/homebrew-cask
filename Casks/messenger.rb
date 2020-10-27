@@ -1,17 +1,21 @@
-cask 'messenger' do
-  version '0.1.13.1491443794-7b1777b58fef0bf9'
-  sha256 '6b6f9888c9bf4e7d8fb2db547331cea7e9df99b85f914322af12a476c47bc984'
+cask "messenger" do
+  version "73.2.121,249985498"
+  sha256 "104ee1faf4b00d6c77b9500ddd601f6388f25dd781e5dbb5a2c0b73cce68eaa0"
 
-  url "https://fbmacmessenger.rsms.me/dist/Messenger-#{version}.zip"
-  appcast 'https://fbmacmessenger.rsms.me/changelog.xml'
-  name 'Messenger'
-  homepage 'https://fbmacmessenger.rsms.me/'
+  # facebook.com/messenger/desktop/ was verified as official when first introduced to the cask
+  url "https://www.facebook.com/messenger/desktop/update/#{version.after_comma}.zip"
+  # The appcast will fail CI due to its Cache-Control settings. See:
+  #   https://github.com/Homebrew/homebrew-cask/pull/90957#issuecomment-710740050
+  appcast "https://www.facebook.com/messenger/desktop/update/latest-mac.yml"
+  name "Facebook Messenger"
+  desc "Native desktop app for Messenger (formerly Facebook Messenger)"
+  homepage "https://www.messenger.com/desktop"
 
-  app 'Messenger.app'
+  app "Messenger.app"
 
   zap trash: [
-               '~/Library/Caches/me.rsms.fbmessenger',
-               '~/Library/Cookies/me.rsms.fbmessenger.binarycookies',
-               '~/Library/Preferences/me.rsms.fbmessenger.plist',
-             ]
+    "~/Library/Application Support/Messenger",
+    "~/Library/Caches/Messenger",
+    "~/Library/Logs/Messenger",
+  ]
 end

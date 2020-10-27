@@ -1,11 +1,12 @@
-cask 'orange' do
-  version '3.23.1'
-  sha256 '3ab38b74ecc3a4c7a39a96f498630a0518468efbdfe37f1ebc641d7b16e9f226'
+cask "orange" do
+  version "3.27.0"
+  sha256 "8c3ef825161a5d2ccb9079ec888bb1810c341e66aa2524dd3cac18750127f302"
 
-  url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://service.biolab.si/download/orange?platform=mac'
-  name 'Orange'
-  homepage 'https://orange.biolab.si/'
+  url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}-Python3.7.6.dmg"
+  appcast "https://github.com/biolab/orange3/releases.atom"
+  name "Orange"
+  desc "Component-based data mining software"
+  homepage "https://orange.biolab.si/"
 
   app "Orange#{version.major}.app"
 end

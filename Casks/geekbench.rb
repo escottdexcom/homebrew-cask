@@ -1,24 +1,24 @@
-cask 'geekbench' do
-  if MacOS.version <= :mavericks
-    version '3.4.2'
-    sha256 '05e1b977a46648d38cf6c641be7ef34722200d0168a10d4372fca771ffa24e28'
-  elsif MacOS.version <= :mavericks
-    version '4.4.2'
-    sha256 '3c46e630a28a0752afd702fc1cd379edd2420001be22302c932e61751284c0cc'
+cask "geekbench" do
+  if MacOS.version <= :sierra
+    version "4.4.2"
+    sha256 "3c46e630a28a0752afd702fc1cd379edd2420001be22302c932e61751284c0cc"
   else
-    version '5.0.4'
-    sha256 'e996413fc2c6a1d4cd437b6b7427d5ae9a62912547dc9c981d43341ef659deae'
+    version "5.2.5"
+    sha256 "d506dff52cfd052c1b0bbf55fe0dfca291263f1c58ef64d01133d58638986fc5"
   end
 
   url "https://cdn.geekbench.com/Geekbench-#{version}-Mac.zip"
   appcast "https://www.primatelabs.com/appcast/geekbench#{version.major}.xml"
-  name 'Geekbench'
-  homepage 'https://www.geekbench.com/'
+  name "Geekbench"
+  desc "Tool to measure the computer system's performance"
+  homepage "https://www.geekbench.com/"
+
+  auto_updates true
 
   app "Geekbench #{version.major}.app"
 
   zap trash: [
-               "~/Library/Caches/com.primatelabs.Geekbench#{version.major}",
-               "~/Library/Preferences/com.primatelabs.Geekbench#{version.major}.plist",
-             ]
+    "~/Library/Caches/com.primatelabs.Geekbench#{version.major}",
+    "~/Library/Preferences/com.primatelabs.Geekbench#{version.major}.plist",
+  ]
 end

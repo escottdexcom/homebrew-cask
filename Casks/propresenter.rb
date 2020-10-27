@@ -1,29 +1,29 @@
-cask 'propresenter' do
-  version '6.5_100990994'
-  sha256 '4d11a26ef9dde9462e123cdc8a2df6979d4791597bd885087e6c04e08600f1f1'
+cask "propresenter" do
+  version "7.2.1,117571849"
+  sha256 "aeedaced2f94b17f54b548c1e1f47ea938900f1aded4585467da4b18d2dd383d"
 
-  url "https://renewedvision.com/downloads/ProPresenter%20#{version.major}_#{version}.dmg"
-  appcast "https://www.renewedvision.com/update/ProPresenter#{version.major}.php"
-  name 'ProPresenter'
-  homepage 'https://www.renewedvision.com/propresenter.php'
+  url "https://renewedvision.com/downloads/propresenter/mac/ProPresenter_#{version.before_comma}_#{version.after_comma}.zip"
+  appcast "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=0&appVersion=0&buildNumber=0&includeNotes=0"
+  name "ProPresenter"
+  homepage "https://www.renewedvision.com/propresenter.php"
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: ">= :mojave"
 
-  app "ProPresenter #{version.major}.app"
+  app "ProPresenter.app"
 
   zap trash: [
-               '~/Library/Application Support/RenewedVision/ProPresenter6',
-               '~/Library/Caches/KSCrashReports/ProPresenter 6',
-               '~/Library/Caches/Sessions/ProPresenter 6',
-               '~/Library/Caches/com.renewedvision.ProPresenter6',
-               '~/Library/Preferences/com.renewedvision.ProPresenter6.plist',
-               '/Library/Application Support/RenewedVision',
-               '/Library/Caches/com.renewedvision.ProPresenter6',
-               '/Users/Shared/Renewed Vision Media',
-             ],
+    "~/Library/Application Support/RenewedVision/ProPresenter6",
+    "~/Library/Caches/KSCrashReports/ProPresenter 6",
+    "~/Library/Caches/Sessions/ProPresenter 6",
+    "~/Library/Caches/com.renewedvision.ProPresenter6",
+    "~/Library/Preferences/com.renewedvision.ProPresenter6.plist",
+    "/Library/Application Support/RenewedVision",
+    "/Library/Caches/com.renewedvision.ProPresenter6",
+    "/Users/Shared/Renewed Vision Media",
+  ],
       rmdir: [
-               '~/Library/Application Support/RenewedVision',
-               '~/Library/Caches/KSCrashReports',
-               '~/Library/Caches/Sessions',
-             ]
+        "~/Library/Application Support/RenewedVision",
+        "~/Library/Caches/KSCrashReports",
+        "~/Library/Caches/Sessions",
+      ]
 end

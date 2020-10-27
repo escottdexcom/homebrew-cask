@@ -1,11 +1,12 @@
-cask 'typeface' do
-  version '2.6.2'
-  sha256 'dda392602da87def27549e54663e52bffa9d678bee64318fcb025fabebfc2e91'
+cask "typeface" do
+  version "2.7.0,2023"
+  sha256 "44884da6ab1c23f0b068b4f2f23cf9012d8df53c6df847833ecff5c857a5aca8"
 
-  url 'https://dcdn.typefaceapp.com/latest'
-  appcast 'https://dcdn.typefaceapp.com/appcast.xml'
-  name 'Typeface'
-  homepage 'https://typefaceapp.com/'
+  url "https://dcdn.typefaceapp.com/latest"
+  appcast "https://dcdn.typefaceapp.com/appcast.xml"
+  name "Typeface"
+  desc "Font manager application"
+  homepage "https://typefaceapp.com/"
 
-  app 'Typeface.app'
+  app "Typeface.app"
 end

@@ -1,11 +1,11 @@
-cask 'grandtotal' do
-  version '5.3'
-  sha256 'e37ad37057e8ac1f514399ab05ef36cdbda0f7f678fd1cdf4ef1fdfe63acb312'
+cask "grandtotal" do
+  version "6.2"
+  sha256 "042d743514ad94f3c933810cee8e2ce247771a4692fddf10d2bd28f0175b3cf3"
 
   url "https://mediaatelier.com/GrandTotal#{version.major}/GrandTotal_#{version}.zip"
   appcast "https://mediaatelier.com/GrandTotal#{version.major}/feed.php"
-  name 'GrandTotal'
+  name "GrandTotal"
   homepage "https://www.mediaatelier.com/GrandTotal#{version.major}/"
 
-  app 'GrandTotal.app'
+  app "GrandTotal.app"
 end

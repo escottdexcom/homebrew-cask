@@ -1,13 +1,13 @@
-cask 'profind' do
-  version '1.7.0'
-  sha256 '21391307ebfa022a90ff9fcd8706d88ef56999e5b5f3e68868e46e514da8fbab'
+cask "profind" do
+  version "1.8.3"
+  sha256 "475dac0db32936a636a742eb7955803340b72f5bdf387aae3b6555be0cff7383"
 
   url "https://www.zeroonetwenty.com/profind/downloads/ProFind#{version.no_dots}.dmg"
-  appcast 'https://www.zeroonetwenty.com/profind/downloads/ProFindVersionInfo.xml'
-  name 'ProFind'
-  homepage 'https://www.zeroonetwenty.com/profind/'
+  appcast "https://www.zeroonetwenty.com/profind/downloads/ProFindVersionInfo.xml"
+  name "ProFind"
+  homepage "https://www.zeroonetwenty.com/profind/"
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: ">= :high_sierra"
 
-  app 'ProFind.app'
+  app "ProFind.app"
 end
